@@ -18,20 +18,22 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginView.delegate(delegate: self)
-        view.backgroundColor =  UIColor(red: 222/255, green: 161/255, blue: 161/255, alpha: 1)
     }
-
-
 }
 
 extension LoginViewController: LoginScreenProtocol {
+    func actionLoginButton() {
+        print("certao1")
+    }
+    
     func actionForgotButton() {
+        print("certao2")
 //        let forgotViewController = ForgotViewController()
 //        self.navigationController?.pushViewController(forgotViewController, animated: true)
     }
     
     func actionSignUpButton() {
-        print("certao")
+        print("certao3")
 //        let signUpViewController = SignUpViewController()
 //        self.navigationController?.pushViewController(signUpViewController, animated: true)
     }
