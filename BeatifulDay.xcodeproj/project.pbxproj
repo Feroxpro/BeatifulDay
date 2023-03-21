@@ -9,23 +9,24 @@
 /* Begin PBXBuildFile section */
 		1B5248E429C9327D00227B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5248E329C9327D00227B8B /* AppDelegate.swift */; };
 		1B5248E629C9327D00227B8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5248E529C9327D00227B8B /* SceneDelegate.swift */; };
-		1B5248E829C9327D00227B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5248E729C9327D00227B8B /* ViewController.swift */; };
-		1B5248EB29C9327D00227B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5248E929C9327D00227B8B /* Main.storyboard */; };
+		1B5248E829C9327D00227B8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5248E729C9327D00227B8B /* LoginViewController.swift */; };
 		1B5248EE29C9327D00227B8B /* BeatifulDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B5248EC29C9327D00227B8B /* BeatifulDay.xcdatamodeld */; };
 		1B5248F029C9328000227B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5248EF29C9328000227B8B /* Assets.xcassets */; };
 		1B5248F329C9328000227B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5248F129C9328000227B8B /* LaunchScreen.storyboard */; };
+		1B52490229C93AE400227B8B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52490129C93AE400227B8B /* LoginView.swift */; };
+		1B52490529C93B6900227B8B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1B52490429C93B6900227B8B /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B5248E029C9327C00227B8B /* BeatifulDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeatifulDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B5248E329C9327D00227B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B5248E529C9327D00227B8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B5248E729C9327D00227B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1B5248EA29C9327D00227B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B5248E729C9327D00227B8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1B5248ED29C9327D00227B8B /* BeatifulDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeatifulDay.xcdatamodel; sourceTree = "<group>"; };
 		1B5248EF29C9328000227B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B5248F229C9328000227B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B5248F429C9328000227B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B52490129C93AE400227B8B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B52490529C93B6900227B8B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +60,72 @@
 		1B5248E229C9327C00227B8B /* BeatifulDay */ = {
 			isa = PBXGroup;
 			children = (
-				1B5248E329C9327D00227B8B /* AppDelegate.swift */,
-				1B5248E529C9327D00227B8B /* SceneDelegate.swift */,
-				1B5248E729C9327D00227B8B /* ViewController.swift */,
-				1B5248E929C9327D00227B8B /* Main.storyboard */,
-				1B5248EF29C9328000227B8B /* Assets.xcassets */,
-				1B5248F129C9328000227B8B /* LaunchScreen.storyboard */,
+				1B52490029C93A5800227B8B /* Network */,
+				1B5248FF29C93A4B00227B8B /* Sources */,
+				1B5248FE29C93A3A00227B8B /* Delegate */,
+				1B5248FC29C93A1C00227B8B /* ViewModel */,
+				1B5248FB29C93A1200227B8B /* Model */,
+				1B5248FA29C93A0C00227B8B /* View */,
 				1B5248F429C9328000227B8B /* Info.plist */,
 				1B5248EC29C9327D00227B8B /* BeatifulDay.xcdatamodeld */,
 			);
 			path = BeatifulDay;
+			sourceTree = "<group>";
+		};
+		1B5248FA29C93A0C00227B8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B5248FD29C93A2200227B8B /* Controller */,
+				1B52490129C93AE400227B8B /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B5248FB29C93A1200227B8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B5248FC29C93A1C00227B8B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1B5248FD29C93A2200227B8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B5248E729C9327D00227B8B /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B5248FE29C93A3A00227B8B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1B5248E529C9327D00227B8B /* SceneDelegate.swift */,
+				1B5248E329C9327D00227B8B /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		1B5248FF29C93A4B00227B8B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1B5248F129C9328000227B8B /* LaunchScreen.storyboard */,
+				1B5248EF29C9328000227B8B /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1B52490029C93A5800227B8B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +144,9 @@
 			dependencies = (
 			);
 			name = BeatifulDay;
+			packageProductDependencies = (
+				1B52490429C93B6900227B8B /* SnapKit */,
+			);
 			productName = BeatifulDay;
 			productReference = 1B5248E029C9327C00227B8B /* BeatifulDay.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +175,9 @@
 				Base,
 			);
 			mainGroup = 1B5248D729C9327C00227B8B;
+			packageReferences = (
+				1B52490329C93B6900227B8B /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 1B5248E129C9327C00227B8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,7 +194,6 @@
 			files = (
 				1B5248F329C9328000227B8B /* LaunchScreen.storyboard in Resources */,
 				1B5248F029C9328000227B8B /* Assets.xcassets in Resources */,
-				1B5248EB29C9327D00227B8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +204,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B5248E829C9327D00227B8B /* ViewController.swift in Sources */,
+				1B5248E829C9327D00227B8B /* LoginViewController.swift in Sources */,
 				1B5248E429C9327D00227B8B /* AppDelegate.swift in Sources */,
 				1B5248EE29C9327D00227B8B /* BeatifulDay.xcdatamodeld in Sources */,
+				1B52490229C93AE400227B8B /* LoginView.swift in Sources */,
 				1B5248E629C9327D00227B8B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +215,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1B5248E929C9327D00227B8B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B5248EA29C9327D00227B8B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1B5248F129C9328000227B8B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +352,6 @@
 				INFOPLIST_FILE = BeatifulDay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +379,6 @@
 				INFOPLIST_FILE = BeatifulDay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +416,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B52490329C93B6900227B8B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B52490429C93B6900227B8B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B52490329C93B6900227B8B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1B5248EC29C9327D00227B8B /* BeatifulDay.xcdatamodeld */ = {
