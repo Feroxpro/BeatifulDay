@@ -14,7 +14,7 @@ protocol LoginScreenProtocol: AnyObject {
     func actionLoginButton()
 }
 
-    class LoginView: UIView {
+    class LoginScreenView: UIView {
         
         weak var delegate:LoginScreenProtocol?
         func delegate(delegate:LoginScreenProtocol?){
@@ -54,6 +54,7 @@ protocol LoginScreenProtocol: AnyObject {
             }
             let button = UIButton(type: .system, primaryAction: action)
             button.setTitleColor(UIColor(red: 254/255, green: 38/255, blue: 238/255, alpha: 1), for: .normal)
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
             return button
         }()
         
@@ -71,7 +72,7 @@ protocol LoginScreenProtocol: AnyObject {
         
         lazy var signUpContainer: UIView = {
             let view = UIView()
-            view.backgroundColor = .white
+            view.backgroundColor = .black
             return view
         }()
         
@@ -88,7 +89,7 @@ protocol LoginScreenProtocol: AnyObject {
         lazy var signUpLabel: UILabel = {
             let label = UILabel()
             label.text = "Não tem uma conta?"
-            label.textColor = UIColor(red: 254/255, green: 38/255, blue: 238/255, alpha: 1)
+            label.textColor = .white
             label.font = UIFont.boldSystemFont(ofSize: 19)
             return label
         }()
@@ -122,8 +123,8 @@ protocol LoginScreenProtocol: AnyObject {
             addSubview(forgotPassword)
             addSubview(loginButton)
             addSubview(signUpContainer)
-//            signUpContainer.addSubview(signUpButton)
-//            signUpContainer.addSubview(signUpLabel)
+            signUpContainer.addSubview(signUpButton)
+            signUpContainer.addSubview(signUpLabel)
             
         }
         
@@ -153,27 +154,28 @@ protocol LoginScreenProtocol: AnyObject {
             }
             loginButton.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
-                make.top.equalTo(forgotPassword.snp.bottom).offset(10)
+                make.top.equalTo(forgotPassword.snp.bottom).offset(20)
                 make.height.equalTo(40)
                 make.width.equalTo(280)
             }
             
             signUpContainer.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
-                make.top.equalTo(loginButton.snp.bottom).offset(10)
-                make.width.equalTo(200)
-//                make.
+                make.top.equalTo(loginButton.snp.bottom).offset(20)
+                make.width.equalTo(310)
+                make.height.equalTo(20)
             }
             
-//            signUpLabel.snp.makeConstraints { make in
-//                make.centerX.equalToSuperview()
-//                make.top.equalTo(loginButton.snp.bottom).offset(60)
-//            }
-//
-//            signUpButton.snp.makeConstraints { make in
-//                make.leading.equalTo(signUpLabel.snp.trailing).offset(3)
-//                make.top.equalTo(loginButton.snp.bottom).offset(60)
-//            }
+            signUpLabel.snp.makeConstraints { make in
+                make.centerY.equalToSuperview()
+                make.leading.equalTo(signUpContainer.snp.leading).inset(10)
+
+            }
+
+            signUpButton.snp.makeConstraints { make in
+                make.centerY.equalToSuperview()
+                make.leading.equalTo(signUpLabel.snp.trailing).offset(3)
+            }
         }
     }
 
