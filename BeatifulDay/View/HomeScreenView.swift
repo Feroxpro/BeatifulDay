@@ -8,7 +8,9 @@
 import UIKit
 import SnapKit
 
-class HomeScreenView: UIView, UISearchBarDelegate {
+class HomeScreenView: BaseView, UISearchBarDelegate {
+    
+    let identifier: String = "HomeCollectionViewCell"
     
     lazy var logoImage: UIImageView = {
         let img = UIImageView()
@@ -34,19 +36,9 @@ class HomeScreenView: UIView, UISearchBarDelegate {
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .vertical
         collectionView.setCollectionViewLayout(layout, animated: false)
-        collectionView.register(PokeCollectionViewCell.self, forCellWithReuseIdentifier: PokeCollectionViewCell.indentifier)
+        collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
         return collectionView
     }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configSubViews()
-        setupContraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource){
         self.collectionView.delegate = delegate
@@ -59,14 +51,14 @@ class HomeScreenView: UIView, UISearchBarDelegate {
     
 
     
-    private func configSubViews() {
+    override func addSubviews() {
         addSubview(searchPoke)
         addSubview(logoImage)
         addSubview(collectionView)
         
     }
     
-    private func setupContraints() {
+    override func configureConstraints() {
         
         logoImage.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -82,7 +74,7 @@ class HomeScreenView: UIView, UISearchBarDelegate {
         }
         
         collectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.searchPoke.snp.bottom).offset(10)
+            make.top.equalTo(self.searchPoke.snp.bottom)
             make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).inset(18)
             make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(18)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)

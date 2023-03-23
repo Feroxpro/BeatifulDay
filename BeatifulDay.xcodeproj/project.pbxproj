@@ -11,7 +11,9 @@
 		1B39DCE929CA7F5100FA619A /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B39DCE829CA7F5100FA619A /* HomeScreenView.swift */; };
 		1B39DCEC29CA9A4500FA619A /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 1B39DCEB29CA9A4500FA619A /* FSCalendar */; };
 		1B39DCEE29CA9D3A00FA619A /* SchedulingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B39DCED29CA9D3A00FA619A /* SchedulingScreenView.swift */; };
-		1B39DCF029CA9FBE00FA619A /* PokeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B39DCEF29CA9FBD00FA619A /* PokeCollectionViewCell.swift */; };
+		1B39DCF029CA9FBE00FA619A /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B39DCEF29CA9FBD00FA619A /* HomeCollectionViewCell.swift */; };
+		1B51960C29CCBB5600B44F3B /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B51960B29CCBB5600B44F3B /* BaseViewCell.swift */; };
+		1B51960F29CCC1CC00B44F3B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B51960E29CCC1CC00B44F3B /* BaseView.swift */; };
 		1B5248E429C9327D00227B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5248E329C9327D00227B8B /* AppDelegate.swift */; };
 		1B5248E629C9327D00227B8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5248E529C9327D00227B8B /* SceneDelegate.swift */; };
 		1B5248E829C9327D00227B8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5248E729C9327D00227B8B /* LoginViewController.swift */; };
@@ -26,7 +28,9 @@
 		1B39DCE629CA7CD800FA619A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1B39DCE829CA7F5100FA619A /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		1B39DCED29CA9D3A00FA619A /* SchedulingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingScreenView.swift; sourceTree = "<group>"; };
-		1B39DCEF29CA9FBD00FA619A /* PokeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1B39DCEF29CA9FBD00FA619A /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1B51960B29CCBB5600B44F3B /* BaseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
+		1B51960E29CCC1CC00B44F3B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		1B5248E029C9327C00227B8B /* BeatifulDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeatifulDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B5248E329C9327D00227B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B5248E529C9327D00227B8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B51960A29CCBB4600B44F3B /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				1B51960B29CCBB5600B44F3B /* BaseViewCell.swift */,
+				1B51960E29CCC1CC00B44F3B /* BaseView.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		1B51960D29CCBC5B00B44F3B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1B39DCEF29CA9FBD00FA619A /* HomeCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1B5248D729C9327C00227B8B = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +106,8 @@
 		1B5248FA29C93A0C00227B8B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1B39DCEF29CA9FBD00FA619A /* PokeCollectionViewCell.swift */,
+				1B51960A29CCBB4600B44F3B /* Bases */,
+				1B51960D29CCBC5B00B44F3B /* Cell */,
 				1B5248FD29C93A2200227B8B /* Controller */,
 				1B39DCED29CA9D3A00FA619A /* SchedulingScreenView.swift */,
 				1B52490129C93AE400227B8B /* LoginScreenView.swift */,
@@ -225,9 +247,11 @@
 				1B5248EE29C9327D00227B8B /* BeatifulDay.xcdatamodeld in Sources */,
 				1B52490229C93AE400227B8B /* LoginScreenView.swift in Sources */,
 				1B5248E629C9327D00227B8B /* SceneDelegate.swift in Sources */,
+				1B51960C29CCBB5600B44F3B /* BaseViewCell.swift in Sources */,
 				1B39DCE929CA7F5100FA619A /* HomeScreenView.swift in Sources */,
-				1B39DCF029CA9FBE00FA619A /* PokeCollectionViewCell.swift in Sources */,
+				1B39DCF029CA9FBE00FA619A /* HomeCollectionViewCell.swift in Sources */,
 				1B39DCEE29CA9D3A00FA619A /* SchedulingScreenView.swift in Sources */,
+				1B51960F29CCC1CC00B44F3B /* BaseView.swift in Sources */,
 				1B39DCE729CA7CD800FA619A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

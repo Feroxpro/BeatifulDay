@@ -19,41 +19,26 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homeScreenView.configProtocolsCollectionView(delegate: self, dataSource: self)
-        self.homeScreenView.configProtocolsSearchBar(delegate: self)
+//        self.homeScreenView.configProtocolsSearchBar(delegate: self)
+//        self.homeScreenView.collectionView.delegate = self
+//        self.homeScreenView.collectionView.dataSource = self
 //        homeScreenView.calendar.delegate = self
     }
     
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        // Lidar com seleção de data
-    }
-
-    func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        // Lidar com desseleção de data
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
+extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 25
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: PokeCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: PokeCollectionViewCell.indentifier, for: indexPath) as? PokeCollectionViewCell
+        let cell: HomeCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: homeScreenView.identifier, for: indexPath) as? HomeCollectionViewCell
         return cell ?? UICollectionViewCell()
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 80)
+        return CGSize(width: view.frame.width, height: 100)
     }
 
 }
